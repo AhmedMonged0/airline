@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوجهات - شركة الطيران العربية</title>
+    <meta name="description" content="اكتشف وجهاتنا المحلية والدولية. رحلات إلى جميع أنحاء العالم.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" crossorigin="anonymous">
+    
+    <!-- Alternative CDN for Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <style>
+        /* Ensure Font Awesome loads properly */
+        .fab, .fas {
+            font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 5 Brands", "Font Awesome 5 Free" !important;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="/">
+                        <img src="/images/logo.png" alt="شركة الطيران العربية" class="logo">
+                        <span class="logo-text">شركة الطيران العربية</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/destinations" class="nav-link active">الوجهات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/booking" class="nav-link">الحجز</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/news" class="nav-link">الأخبار والعروض</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link">اتصل بنا</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <div class="language-switch">
+                    <button class="lang-btn" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">وجهاتنا</h1>
+                <p class="page-subtitle">اكتشف أجمل المدن حول العالم مع شركة الطيران العربية</p>
+            </div>
+        </div>
+        <div class="page-header-bg"></div>
+    </section>
+
+    <!-- Destinations Filter -->
+    <section class="destinations-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">جميع الوجهات</button>
+                <button class="filter-btn" data-filter="domestic">رحلات داخلية</button>
+                <button class="filter-btn" data-filter="international">رحلات دولية</button>
+                <button class="filter-btn" data-filter="popular">الأكثر شعبية</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations-section">
+        <div class="container">
+            <div class="destinations-grid">
+                <!-- Domestic Destinations -->
+                <div class="destination-card" data-category="domestic popular">
+                    <div class="destination-image">
+                        <img src="/images/jeddah.jpg" alt="جدة">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">جدة</h3>
+                        <p class="destination-desc">عروس البحر الأحمر ومدينة الأمواج</p>
+                        <div class="destination-details">
+                            <div class="destination-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>1.5 ساعة</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>يومياً</span>
+                                </div>
+                            </div>
+                            <div class="destination-price">
+                                <div class="price-amount">من 299 ريال</div>
+                                <div class="price-note">ذهاب وعودة</div>
+                            </div>
+                        </div>
+                        <a href="/booking" class="btn btn-outline">احجز الآن</a>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="domestic">
+                    <div class="destination-image">
+                        <img src="/images/dammam.jpg" alt="الدمام">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">الدمام</h3>
+                        <p class="destination-desc">عاصمة المنطقة الشرقية ومدينة النفط</p>
+                        <div class="destination-details">
+                            <div class="destination-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>1.2 ساعة</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>يومياً</span>
+                                </div>
+                            </div>
+                            <div class="destination-price">
+                                <div class="price-amount">من 249 ريال</div>
+                                <div class="price-note">ذهاب وعودة</div>
+                            </div>
+                        </div>
+                        <a href="/booking" class="btn btn-outline">احجز الآن</a>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="domestic">
+                    <div class="destination-image">
+                        <img src="/images/abha.jpg" alt="أبها">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">أبها</h3>
+                        <p class="destination-desc">مدينة الضباب وعاصمة السياحة</p>
+                        <div class="destination-details">
+                            <div class="destination-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>2 ساعة</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>أسبوعياً</span>
+                                </div>
+                            </div>
+                            <div class="destination-price">
+                                <div class="price-amount">من 399 ريال</div>
+                                <div class="price-note">ذهاب وعودة</div>
+                            </div>
+                        </div>
+                        <a href="/booking" class="btn btn-outline">احجز الآن</a>
+                    </div>
+                </div>
+
+                <!-- International Destinations -->
+                <div class="destination-card" data-category="international popular">
+                    <div class="destination-image">
+                        <img src="/images/dubai.jpg" alt="دبي">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">دبي</h3>
+                        <p class="destination-desc">مدينة الأحلام والترفيه</p>
+                        <div class="destination-details">
+                            <div class="destination-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>2.5 ساعة</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>يومياً</span>
+                                </div>
+                            </div>
+                            <div class="destination-price">
+                                <div class="price-amount">من 999 ريال</div>
+                                <div class="price-note">ذهاب وعودة</div>
+                            </div>
+                        </div>
+                        <a href="/booking" class="btn btn-outline">احجز الآن</a>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="international popular">
+                    <div class="destination-image">
+                        <img src="/images/istanbul.jpg" alt="إسطنبول">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">إسطنبول</h3>
+                        <p class="destination-desc">حيث يلتقي الشرق بالغرب</p>
+                        <div class="destination-details">
+                            <div class="destination-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>4 ساعات</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>أسبوعياً</span>
+                                </div>
+                            </div>
+                            <div class="destination-price">
+                                <div class="price-amount">من 1299 ريال</div>
+                                <div class="price-note">ذهاب وعودة</div>
+                            </div>
+                        </div>
+                        <a href="/booking" class="btn btn-outline">احجز الآن</a>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="international">
+                    <div class="destination-image">
+                        <img src="/images/cairo.jpg" alt="القاهرة">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">القاهرة</h3>
+                        <p class="destination-desc">مدينة الألف مئذنة</p>
+                        <div class="destination-details">
+                            <div class="destination-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>3 ساعات</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>أسبوعياً</span>
+                                </div>
+                            </div>
+                            <div class="destination-price">
+                                <div class="price-amount">من 899 ريال</div>
+                                <div class="price-note">ذهاب وعودة</div>
+                            </div>
+                        </div>
+                        <a href="/booking" class="btn btn-outline">احجز الآن</a>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="international popular">
+                    <div class="destination-image">
+                        <img src="/images/london.jpg" alt="لندن">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">لندن</h3>
+                        <p class="destination-desc">عاصمة الثقافة والتاريخ</p>
+                        <div class="destination-details">
+                            <div class="destination-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>7 ساعات</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>أسبوعياً</span>
+                                </div>
+                            </div>
+                            <div class="destination-price">
+                                <div class="price-amount">من 2499 ريال</div>
+                                <div class="price-note">ذهاب وعودة</div>
+                            </div>
+                        </div>
+                        <a href="/booking" class="btn btn-outline">احجز الآن</a>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="international">
+                    <div class="destination-image">
+                        <img src="/images/paris.jpg" alt="باريس">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">باريس</h3>
+                        <p class="destination-desc">مدينة الحب والأناقة</p>
+                        <div class="destination-details">
+                            <div class="destination-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>6.5 ساعة</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>أسبوعياً</span>
+                                </div>
+                            </div>
+                            <div class="destination-price">
+                                <div class="price-amount">من 2799 ريال</div>
+                                <div class="price-note">ذهاب وعودة</div>
+                            </div>
+                        </div>
+                        <a href="/booking" class="btn btn-outline">احجز الآن</a>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="international">
+                    <div class="destination-image">
+                        <img src="/images/newyork.jpg" alt="نيويورك">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">نيويورك</h3>
+                        <p class="destination-desc">مدينة لا تنام</p>
+                        <div class="destination-details">
+                            <div class="destination-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>14 ساعة</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>أسبوعياً</span>
+                                </div>
+                            </div>
+                            <div class="destination-price">
+                                <div class="price-amount">من 3999 ريال</div>
+                                <div class="price-note">ذهاب وعودة</div>
+                            </div>
+                        </div>
+                        <a href="/booking" class="btn btn-outline">احجز الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">خدماتنا المميزة</h2>
+                <p class="section-subtitle">نقدم مجموعة شاملة من الخدمات لضمان رحلة مريحة</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>وجبات مجانية</h3>
+                    <p>وجبات ساخنة ومشروبات مجانية في جميع الرحلات</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-suitcase"></i>
+                    </div>
+                    <h3>أمتعة مجانية</h3>
+                    <p>30 كجم أمتعة مجانية للرحلات الدولية</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>واي فاي مجاني</h3>
+                    <p>اتصال بالإنترنت مجاني في جميع الطائرات</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>ترفيه على الطيران</h3>
+                    <p>أفلام ومسلسلات وموسيقى مجانية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="/images/logo-white.png" alt="شركة الطيران العربية">
+                        <h3>شركة الطيران العربية</h3>
+                    </div>
+                    <p class="footer-desc">نحن نقدم أفضل خدمات الطيران لعملائنا الكرام مع ضمان الجودة والأمان.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="social-link facebook" title="فيسبوك">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="فيسبوك" class="social-icon">
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link instagram" title="إنستغرام">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="إنستغرام" class="social-icon">
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link linkedin" title="لينكد إن">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="لينكد إن" class="social-icon">
+                        </a>
+                        <a href="https://wa.me/201003061972" target="_blank" class="social-link whatsapp" title="واتساب">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="واتساب" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">من نحن</a></li>
+                        <li><a href="/destinations">الوجهات</a></li>
+                        <li><a href="/booking">الحجز</a></li>
+                        <li><a href="/news">الأخبار</a></li>
+                        <li><a href="/contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">الخدمات</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">رحلات داخلية</a></li>
+                        <li><a href="#">رحلات دولية</a></li>
+                        <li><a href="#">خدمة الشحن</a></li>
+                        <li><a href="#">خدمة VIP</a></li>
+                        <li><a href="#">برنامج المسافر الدائم</a></li>
+                    </ul>
+                </div>
+                
+
+
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 شركة الطيران العربية. جميع الحقوق محفوظة.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">الشروط والأحكام</a>
+                    </div>
+                </div>
+                <div class="developer-info">
+                    <p>تم تطوير الموقع بواسطة: <strong>Ahmed Monged</strong></p>
+                    <p>للتواصل: <a href="tel:+201003061972">+201003061972</a> | <a href="mailto:ahmdmnjd806@gmail.com">ahmdmnjd806@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const destinationCards = document.querySelectorAll('.destination-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    destinationCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const categories = card.getAttribute('data-category');
+                            if (categories.includes(filter)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

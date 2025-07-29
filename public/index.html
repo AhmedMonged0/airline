@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الطيران العربية - الصفحة الرئيسية</title>
+    <meta name="description" content="احجز رحلاتك مع شركة الطيران العربية. أفضل الأسعار وأعلى جودة في الخدمة.">
+    <meta name="keywords" content="طيران, حجز, سفر, رحلات, شركة طيران">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Ensure Font Awesome loads properly */
+        .fab, .fas, .far, .fal, .fat, .fad {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="/">
+                        <img src="/images/logo.png" alt="شركة الطيران العربية" class="logo">
+                        <span class="logo-text">شركة الطيران العربية</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link active">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/destinations" class="nav-link">الوجهات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/booking" class="nav-link">الحجز</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/news" class="nav-link">الأخبار والعروض</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link">اتصل بنا</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <div class="language-switch">
+                    <button class="lang-btn" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Video Background -->
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="/videos/airplane-hero.mp4" type="video/mp4">
+                <source src="/videos/airplane-hero.webm" type="video/webm">
+                <!-- Fallback image if video doesn't load -->
+                <img src="/images/airplane-fallback.jpg" alt="طائرة في السماء">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">اكتشف العالم معنا</h1>
+                <p class="hero-subtitle">أفضل الأسعار وأعلى جودة في الخدمة لجميع وجهاتك المفضلة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Search Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="booking-header">
+                    <h2 class="booking-title">احجز رحلتك الآن</h2>
+                    <p class="booking-subtitle">ابحث عن أفضل الرحلات بأسعار مناسبة</p>
+                </div>
+                
+                <div class="booking-search">
+                    <form class="search-form" id="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="from">من</label>
+                                <input type="text" id="from" name="from" placeholder="مدينة المغادرة" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="to">إلى</label>
+                                <input type="text" id="to" name="to" placeholder="مدينة الوصول" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departure">تاريخ المغادرة</label>
+                                <input type="date" id="departure" name="departure" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="return">تاريخ العودة</label>
+                                <input type="date" id="return" name="return">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="passengers">عدد الركاب</label>
+                                <select id="passengers" name="passengers">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="class">فئة المقعد</label>
+                                <select id="class" name="class">
+                                    <option value="economy">اقتصادية</option>
+                                    <option value="business">رجال الأعمال</option>
+                                    <option value="first">الدرجة الأولى</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="search-btn">
+                            <i class="fas fa-search"></i>
+                            ابحث عن الرحلات
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section class="fleet">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">أسطولنا الحديث</h2>
+                <p class="section-subtitle">طائرات حديثة ومتطورة لضمان راحتك وأمانك</p>
+            </div>
+            
+            <div class="fleet-gallery">
+                <div class="fleet-item">
+                    <div class="fleet-image">
+                        <img src="/images/airplane1.jpg" alt="طائرة بوينغ 787">
+                        <div class="fleet-overlay">
+                            <div class="fleet-info">
+                                <h3>بوينغ 787 دريملاينر</h3>
+                                <p>أحدث التقنيات في عالم الطيران</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fleet-item">
+                    <div class="fleet-image">
+                        <img src="/images/airplane2.jpg" alt="طائرة إيرباص A350">
+                        <div class="fleet-overlay">
+                            <div class="fleet-info">
+                                <h3>إيرباص A350</h3>
+                                <p>راحة استثنائية وكفاءة في استهلاك الوقود</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">لماذا تختارنا؟</h2>
+                <p class="section-subtitle">نقدم أفضل الخدمات لعملائنا الكرام</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 class="feature-title">أسطول حديث</h3>
+                    <p class="feature-text">أحدث الطائرات وأكثرها أماناً وراحة</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title">مواعيد دقيقة</h3>
+                    <p class="feature-text">نلتزم بالمواعيد ونضمن وصولك في الوقت المحدد</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="feature-title">خدمة متميزة</h3>
+                    <p class="feature-text">طاقم محترف وخدمة عالية الجودة</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="feature-title">أسعار تنافسية</h3>
+                    <p class="feature-text">أفضل الأسعار مع ضمان الجودة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">وجهاتنا المميزة</h2>
+                <p class="section-subtitle">اكتشف أجمل المدن حول العالم</p>
+            </div>
+            
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="/images/dubai.jpg" alt="دبي">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">دبي</h3>
+                        <p class="destination-desc">مدينة الأحلام والترفيه</p>
+                        <div class="destination-price">
+                            <span class="price">من 999 ريال</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="/images/istanbul.jpg" alt="إسطنبول">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">إسطنبول</h3>
+                        <p class="destination-desc">حيث يلتقي الشرق بالغرب</p>
+                        <div class="destination-price">
+                            <span class="price">من 1299 ريال</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="/images/london.jpg" alt="لندن">
+                    </div>
+                    <div class="destination-content">
+                        <h3 class="destination-title">لندن</h3>
+                        <p class="destination-desc">عاصمة الثقافة والتاريخ</p>
+                        <div class="destination-price">
+                            <span class="price">من 2499 ريال</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="destinations-cta">
+                <a href="/destinations" class="btn btn-primary">عرض جميع الوجهات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="offers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">أحدث العروض</h2>
+                <p class="section-subtitle">احصل على أفضل العروض والخصومات</p>
+            </div>
+            
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-badge">خصم 30%</div>
+                    <div class="offer-image">
+                        <img src="/images/offer1.jpg" alt="عرض خاص">
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">عرض الصيف</h3>
+                        <p class="offer-desc">خصم 30% على جميع الرحلات الداخلية</p>
+                        <div class="offer-validity">
+                            <span>صالح حتى: 31 أغسطس 2024</span>
+                        </div>
+                        <a href="/booking" class="btn btn-outline">احجز الآن</a>
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-badge">عرض جديد</div>
+                    <div class="offer-image">
+                        <img src="/images/offer2.jpg" alt="عرض جديد">
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">رحلات العائلة</h3>
+                        <p class="offer-desc">خصم 25% للأطفال تحت 12 سنة</p>
+                        <div class="offer-validity">
+                            <span>صالح حتى: 31 ديسمبر 2024</span>
+                        </div>
+                        <a href="/booking" class="btn btn-outline">احجز الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="/images/logo-white.png" alt="شركة الطيران العربية">
+                        <h3>شركة الطيران العربية</h3>
+                    </div>
+                    <p class="footer-desc">نحن نقدم أفضل خدمات الطيران لعملائنا الكرام مع ضمان الجودة والأمان.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="social-link facebook" title="فيسبوك">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="فيسبوك" class="social-icon">
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link instagram" title="إنستغرام">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="إنستغرام" class="social-icon">
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link linkedin" title="لينكد إن">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="لينكد إن" class="social-icon">
+                        </a>
+                        <a href="https://wa.me/201003061972" target="_blank" class="social-link whatsapp" title="واتساب">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="واتساب" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">من نحن</a></li>
+                        <li><a href="/destinations">الوجهات</a></li>
+                        <li><a href="/booking">الحجز</a></li>
+                        <li><a href="/news">الأخبار</a></li>
+                        <li><a href="/contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">الخدمات</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">رحلات داخلية</a></li>
+                        <li><a href="#">رحلات دولية</a></li>
+                        <li><a href="#">خدمة الشحن</a></li>
+                        <li><a href="#">خدمة VIP</a></li>
+                        <li><a href="#">برنامج المسافر الدائم</a></li>
+                    </ul>
+                </div>
+                
+
+
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 شركة الطيران العربية. جميع الحقوق محفوظة.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">الشروط والأحكام</a>
+                    </div>
+                </div>
+                <div class="developer-info">
+                    <p>تم تطوير الموقع بواسطة: <strong>Ahmed Monged</strong></p>
+                    <p>للتواصل: <a href="tel:+201003061972">+201003061972</a> | <a href="mailto:ahmdmnjd806@gmail.com">ahmdmnjd806@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    <script src="/js/booking.js"></script>
+</body>
+</html> 

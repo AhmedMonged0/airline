@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - شركة الطيران العربية</title>
+    <meta name="description" content="تواصل معنا للحصول على المساعدة والدعم. نحن هنا لخدمتك.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Ensure Font Awesome loads properly */
+        .fab, .fas, .far, .fal, .fat, .fad {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+            font-weight: 900;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+        
+        .fab {
+            font-family: "Font Awesome 6 Brands" !important;
+            font-weight: 400;
+        }
+        
+        /* Additional fallback for social icons */
+        .social-link i::before {
+            font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free" !important;
+        }
+        
+        /* Force display of social icons */
+        .social-link i {
+            display: inline-block !important;
+            font-size: 1.2rem !important;
+            line-height: 1 !important;
+        }
+        
+        /* Specific icon fixes */
+        .fa-facebook-f::before { content: "\f39e"; }
+        .fa-instagram::before { content: "\f16d"; }
+        .fa-linkedin-in::before { content: "\f0e1"; }
+        .fa-whatsapp::before { content: "\f232"; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="/">
+                        <img src="/images/logo.png" alt="شركة الطيران العربية" class="logo">
+                        <span class="logo-text">شركة الطيران العربية</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/destinations" class="nav-link">الوجهات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/booking" class="nav-link">الحجز</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/news" class="nav-link">الأخبار والعروض</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link active">اتصل بنا</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <div class="language-switch">
+                    <button class="lang-btn" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">اتصل بنا</h1>
+                <p class="page-subtitle">نحن هنا لمساعدتك. تواصل معنا للحصول على الدعم</p>
+            </div>
+        </div>
+        <div class="page-header-bg"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>معلومات التواصل</h2>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>الهاتف</h4>
+                            <span>+201003061972</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>البريد الإلكتروني</h4>
+                            <span>ahmdmnjd806@gmail.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>العنوان</h4>
+                            <span>القاهرة، جمهورية مصر العربية</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>ساعات العمل</h4>
+                            <span>الأحد - الخميس: 8:00 ص - 6:00 م</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>تابعنا على</h4>
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank" class="social-link facebook" title="فيسبوك">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="فيسبوك" class="social-icon">
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-link instagram" title="إنستغرام">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="إنستغرام" class="social-icon">
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-link linkedin" title="لينكد إن">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="لينكد إن" class="social-icon">
+                            </a>
+                            <a href="https://wa.me/201003061972" target="_blank" class="social-link whatsapp" title="واتساب">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="واتساب" class="social-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>أرسل لنا رسالة</h2>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">الاسم الكامل</label>
+                                <input type="text" id="name" name="name" placeholder="الاسم الكامل" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+966-50-123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">الموضوع</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">اختر الموضوع</option>
+                                    <option value="booking">استفسار عن الحجز</option>
+                                    <option value="support">دعم فني</option>
+                                    <option value="complaint">شكوى</option>
+                                    <option value="suggestion">اقتراح</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" rows="6" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">موقعنا</h2>
+                <p class="section-subtitle">زورنا في مكتبنا الرئيسي</p>
+            </div>
+            
+            <div class="map-container">
+                <div id="map" class="map">
+                    <!-- Google Maps will be loaded here -->
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>خريطة جوجل</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">الأسئلة الشائعة</h2>
+                <p class="section-subtitle">إجابات على أكثر الأسئلة شيوعاً</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كيف يمكنني حجز رحلة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك حجز رحلتك بسهولة من خلال موقعنا الإلكتروني أو تطبيق الهاتف المحمول، أو الاتصال بمركز خدمة العملاء.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي سياسة إلغاء الحجز؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكن إلغاء الحجز قبل 24 ساعة من موعد الرحلة مع خصم رسوم الإلغاء. للحصول على التفاصيل الكاملة، راجع شروط الحجز.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل تقدمون وجبات على الطائرة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم وجبات ساخنة ومشروبات مجانية في جميع الرحلات. يمكنك أيضاً طلب وجبات خاصة مسبقاً.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هو وزن الأمتعة المسموح؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>30 كجم للرحلات الدولية و20 كجم للرحلات الداخلية. يمكن شراء وزن إضافي عند الحجز.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل تقدمون خدمة نقل من المطار؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم خدمة نقل من وإلى المطار للركاب في الدرجة الأولى ورجال الأعمال. يمكن حجز هذه الخدمة مسبقاً.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="/images/logo-white.png" alt="شركة الطيران العربية">
+                        <h3>شركة الطيران العربية</h3>
+                    </div>
+                    <p class="footer-desc">نحن نقدم أفضل خدمات الطيران لعملائنا الكرام مع ضمان الجودة والأمان.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="social-link facebook" title="فيسبوك">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="فيسبوك" class="social-icon">
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link instagram" title="إنستغرام">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="إنستغرام" class="social-icon">
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link linkedin" title="لينكد إن">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="لينكد إن" class="social-icon">
+                        </a>
+                        <a href="https://wa.me/201003061972" target="_blank" class="social-link whatsapp" title="واتساب">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="واتساب" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">من نحن</a></li>
+                        <li><a href="/destinations">الوجهات</a></li>
+                        <li><a href="/booking">الحجز</a></li>
+                        <li><a href="/news">الأخبار</a></li>
+                        <li><a href="/contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">الخدمات</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">رحلات داخلية</a></li>
+                        <li><a href="#">رحلات دولية</a></li>
+                        <li><a href="#">خدمة الشحن</a></li>
+                        <li><a href="#">خدمة VIP</a></li>
+                        <li><a href="#">برنامج المسافر الدائم</a></li>
+                    </ul>
+                </div>
+                
+
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 شركة الطيران العربية. جميع الحقوق محفوظة.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">الشروط والأحكام</a>
+                    </div>
+                </div>
+                <div class="developer-info">
+                    <p>تم تطوير الموقع بواسطة: <strong>Ahmed Monged</strong></p>
+                    <p>للتواصل: <a href="tel:+201003061972">+201003061972</a> | <a href="mailto:ahmdmnjd806@gmail.com">ahmdmnjd806@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    <script>
+        // FAQ Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    // Toggle answer visibility
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                    
+                    // Toggle icon rotation
+                    icon.style.transform = icon.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
+                });
+            });
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Show success message
+                    showNotification('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.', 'success');
+                    
+                    // Reset form
+                    this.reset();
+                });
+            }
+        });
+    </script>
+    
+    <!-- Social Icons Enhancement -->
+    <script src="/js/social-icons.js"></script>
+</body>
+</html> 

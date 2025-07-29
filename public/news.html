@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأخبار والعروض - شركة الطيران العربية</title>
+    <meta name="description" content="أحدث الأخبار والعروض الخاصة من شركة الطيران العربية.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" crossorigin="anonymous">
+    
+    <!-- Alternative CDN for Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <style>
+        /* Ensure Font Awesome loads properly */
+        .fab, .fas {
+            font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 5 Brands", "Font Awesome 5 Free" !important;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="/">
+                        <img src="/images/logo.png" alt="شركة الطيران العربية" class="logo">
+                        <span class="logo-text">شركة الطيران العربية</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/destinations" class="nav-link">الوجهات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/booking" class="nav-link">الحجز</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/news" class="nav-link active">الأخبار والعروض</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link">اتصل بنا</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <div class="language-switch">
+                    <button class="lang-btn" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">الأخبار والعروض</h1>
+                <p class="page-subtitle">أحدث الأخبار والعروض الخاصة من شركة الطيران العربية</p>
+            </div>
+        </div>
+        <div class="page-header-bg"></div>
+    </section>
+
+    <!-- News Filter -->
+    <section class="news-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">جميع الأخبار</button>
+                <button class="filter-btn" data-filter="offers">العروض</button>
+                <button class="filter-btn" data-filter="news">الأخبار</button>
+                <button class="filter-btn" data-filter="events">الفعاليات</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <div class="news-grid">
+                <!-- Offers -->
+                <div class="news-card" data-category="offers">
+                    <div class="news-image">
+                        <img src="/images/offer-summer.jpg" alt="عرض الصيف">
+                        <div class="news-badge">عرض خاص</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">15 يناير 2024</div>
+                        <h3 class="news-title">عرض الصيف - خصم 30% على جميع الرحلات الداخلية</h3>
+                        <p class="news-excerpt">احصل على خصم 30% على جميع الرحلات الداخلية خلال فصل الصيف. العرض صالح حتى 31 أغسطس 2024.</p>
+                        <a href="/booking" class="news-link">احجز الآن <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card" data-category="offers">
+                    <div class="news-image">
+                        <img src="/images/offer-family.jpg" alt="عرض العائلة">
+                        <div class="news-badge">عرض جديد</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">10 يناير 2024</div>
+                        <h3 class="news-title">رحلات العائلة - خصم 25% للأطفال</h3>
+                        <p class="news-excerpt">خصم 25% للأطفال تحت 12 سنة عند السفر مع العائلة. العرض صالح حتى 31 ديسمبر 2024.</p>
+                        <a href="/booking" class="news-link">احجز الآن <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- News -->
+                <div class="news-card" data-category="news">
+                    <div class="news-image">
+                        <img src="/images/news-fleet.jpg" alt="أسطول جديد">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">5 يناير 2024</div>
+                        <h3 class="news-title">إضافة طائرات جديدة إلى الأسطول</h3>
+                        <p class="news-excerpt">يسرنا الإعلان عن إضافة 5 طائرات بوينج 787 دريملاينر جديدة إلى أسطولنا لتحسين خدمة العملاء.</p>
+                        <a href="#" class="news-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card" data-category="news">
+                    <div class="news-image">
+                        <img src="/images/news-routes.jpg" alt="وجهات جديدة">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">1 يناير 2024</div>
+                        <h3 class="news-title">إطلاق رحلات جديدة إلى وجهات أوروبية</h3>
+                        <p class="news-excerpt">نعلن عن إطلاق رحلات جديدة إلى باريس وروما وبرلين ابتداءً من مارس 2024.</p>
+                        <a href="#" class="news-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Events -->
+                <div class="news-card" data-category="events">
+                    <div class="news-image">
+                        <img src="/images/event-exhibition.jpg" alt="معرض السفر">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">20 يناير 2024</div>
+                        <h3 class="news-title">معرض السفر الدولي - الرياض</h3>
+                        <p class="news-excerpt">زورنا في معرض السفر الدولي في الرياض من 15-20 فبراير 2024 واحصل على عروض حصرية.</p>
+                        <a href="#" class="news-link">سجل الآن <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card" data-category="events">
+                    <div class="news-image">
+                        <img src="/images/event-loyalty.jpg" alt="برنامج الولاء">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">25 يناير 2024</div>
+                        <h3 class="news-title">إطلاق برنامج المسافر الدائم الجديد</h3>
+                        <p class="news-excerpt">برنامج ولاء جديد مع مزايا حصرية ونقاط قابلة للاستبدال. سجل الآن واحصل على 1000 نقطة مجانية.</p>
+                        <a href="#" class="news-link">سجل الآن <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card" data-category="offers">
+                    <div class="news-image">
+                        <img src="/images/offer-business.jpg" alt="عرض رجال الأعمال">
+                        <div class="news-badge">عرض محدود</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">30 يناير 2024</div>
+                        <h3 class="news-title">عرض رجال الأعمال - ترقية مجانية</h3>
+                        <p class="news-excerpt">احصل على ترقية مجانية إلى درجة رجال الأعمال عند الحجز قبل 30 يوم من السفر.</p>
+                        <a href="/booking" class="news-link">احجز الآن <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card" data-category="news">
+                    <div class="news-image">
+                        <img src="/images/news-award.jpg" alt="جائزة أفضل شركة طيران">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">28 يناير 2024</div>
+                        <h3 class="news-title">فوز بجائزة أفضل شركة طيران في الشرق الأوسط</h3>
+                        <p class="news-excerpt">يسرنا الإعلان عن فوزنا بجائزة أفضل شركة طيران في الشرق الأوسط لعام 2024.</p>
+                        <a href="#" class="news-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card" data-category="events">
+                    <div class="news-image">
+                        <img src="/images/event-workshop.jpg" alt="ورشة عمل">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">15 فبراير 2024</div>
+                        <h3 class="news-title">ورشة عمل حول السفر الآمن</h3>
+                        <p class="news-excerpt">ورشة عمل مجانية حول نصائح السفر الآمن والاستعداد للرحلات. سجل الآن للحضور.</p>
+                        <a href="#" class="news-link">سجل الآن <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>اشترك في النشرة الإخبارية</h2>
+                <p>احصل على أحدث العروض والأخبار مباشرة إلى بريدك الإلكتروني</p>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            اشترك
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="/images/logo-white.png" alt="شركة الطيران العربية">
+                        <h3>شركة الطيران العربية</h3>
+                    </div>
+                    <p class="footer-desc">نحن نقدم أفضل خدمات الطيران لعملائنا الكرام مع ضمان الجودة والأمان.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="social-link facebook" title="فيسبوك">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="فيسبوك" class="social-icon">
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link instagram" title="إنستغرام">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="إنستغرام" class="social-icon">
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link linkedin" title="لينكد إن">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="لينكد إن" class="social-icon">
+                        </a>
+                        <a href="https://wa.me/201003061972" target="_blank" class="social-link whatsapp" title="واتساب">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="واتساب" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">من نحن</a></li>
+                        <li><a href="/destinations">الوجهات</a></li>
+                        <li><a href="/booking">الحجز</a></li>
+                        <li><a href="/news">الأخبار</a></li>
+                        <li><a href="/contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">الخدمات</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">رحلات داخلية</a></li>
+                        <li><a href="#">رحلات دولية</a></li>
+                        <li><a href="#">خدمة الشحن</a></li>
+                        <li><a href="#">خدمة VIP</a></li>
+                        <li><a href="#">برنامج المسافر الدائم</a></li>
+                    </ul>
+                </div>
+                
+
+
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 شركة الطيران العربية. جميع الحقوق محفوظة.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">الشروط والأحكام</a>
+                    </div>
+                </div>
+                <div class="developer-info">
+                    <p>تم تطوير الموقع بواسطة: <strong>Ahmed Monged</strong></p>
+                    <p>للتواصل: <a href="tel:+201003061972">+201003061972</a> | <a href="mailto:ahmdmnjd806@gmail.com">ahmdmnjd806@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    <script>
+        // News Filter
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const newsCards = document.querySelectorAll('.news-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    newsCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const categories = card.getAttribute('data-category');
+                            if (categories.includes(filter)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Newsletter form
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    showNotification('تم الاشتراك في النشرة الإخبارية بنجاح!', 'success');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
