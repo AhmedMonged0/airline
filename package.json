@@ -7,7 +7,6 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "build": "npm run build:css && npm run build:js",
-    "build:css": "sass src/scss:public/css --style compressed",
     "build:js": "webpack --mode production",
     "watch": "sass src/scss:public/css --watch",
     "test": "jest",
