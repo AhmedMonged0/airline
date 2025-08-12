@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollEffects();
     initFormValidation();
     initAnimations();
+    initDestinationsFilter();
 });
 
 // Navigation Functions
@@ -325,6 +326,62 @@ function showNotification(message, type = 'success') {
             notification.remove();
         }, 300);
     }, 3000);
+}
+
+// Destinations Filter Function
+function initDestinationsFilter() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const destinationCards = document.querySelectorAll('.destination-card');
+    
+    if (filterButtons.length === 0 || destinationCards.length === 0) {
+        return; // Exit if not on destinations page
+    }
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Get filter value
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Filter destination cards
+            destinationCards.forEach(card => {
+                if (filterValue === 'all') {
+                    card.style.display = 'block';
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                } else {
+                    const cardCategories = card.getAttribute('data-category');
+                    if (cardCategories && cardCategories.includes(filterValue)) {
+                        card.style.display = 'block';
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                }
+            });
+            
+            // Add animation effect
+            setTimeout(() => {
+                destinationCards.forEach((card, index) => {
+                    if (card.style.display !== 'none') {
+                        card.style.transition = 'all 0.3s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }
+                });
+            }, 100);
+        });
+    });
 }
 
 // Global functions for external use
