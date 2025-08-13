@@ -13,30 +13,30 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/css/(.*)",
-      "dest": "/public/css/$1"
+      "source": "/css/(.*)",
+      "destination": "/public/css/$1"
     },
     {
-      "src": "/js/(.*)",
-      "dest": "/public/js/$1"
+      "source": "/js/(.*)",
+      "destination": "/public/js/$1"
     },
     {
-      "src": "/images/(.*)",
-      "dest": "/public/images/$1"
+      "source": "/images/(.*)",
+      "destination": "/public/images/$1"
     },
     {
-      "src": "/videos/(.*)",
-      "dest": "/public/videos/$1"
+      "source": "/videos/(.*)",
+      "destination": "/public/videos/$1"
     },
     {
-      "src": "/fonts/(.*)",
-      "dest": "/public/fonts/$1"
+      "source": "/fonts/(.*)",
+      "destination": "/public/fonts/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/api/index.js"
+      "source": "/(.*)",
+      "destination": "/api/index.js"
     }
   ],
   "headers": [
@@ -52,7 +52,7 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "BUILD_TIME": "2025-08-13T08:02:18.930Z"
+    "BUILD_TIME": "2025-08-13T08:04:44.229Z"
   },
   "github": {
     "autoJobCancelation": false

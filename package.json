@@ -1,6 +1,6 @@
 {
   "name": "airline-website",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Modern airline company website with booking system",
   "main": "server.js",
   "engines": {
