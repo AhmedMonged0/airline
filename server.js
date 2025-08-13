@@ -73,7 +73,25 @@ app.get('/contact', (req, res) => {
 });
 
 app.get('/admin', (req, res) => {
-  res.sendFile(path.join(__dirname, 'admin', 'dashboard.html'));
+  // Redirect to admin dashboard or show a simple admin page
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>لوحة الإدارة - SkyLine International</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div style="text-align: center; padding: 50px;">
+            <h1>لوحة الإدارة</h1>
+            <p>قريباً...</p>
+            <a href="/" style="color: #007bff; text-decoration: none;">العودة للصفحة الرئيسية</a>
+        </div>
+    </body>
+    </html>
+  `);
 });
 
 // Error handling middleware
@@ -87,10 +105,57 @@ app.use((err, req, res, next) => {
 
 // 404 handler
 app.use((req, res) => {
-  res.status(404).json({ 
-    success: false, 
-    message: 'Route not found' 
-  });
+  res.status(404).send(`
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>الصفحة غير موجودة - SkyLine International</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <style>
+            .error-page {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                text-align: center;
+                padding: 20px;
+            }
+            .error-code {
+                font-size: 6rem;
+                font-weight: bold;
+                color: #007bff;
+                margin-bottom: 20px;
+            }
+            .error-message {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+                color: #333;
+            }
+            .back-home {
+                background: #007bff;
+                color: white;
+                padding: 12px 30px;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background 0.3s;
+            }
+            .back-home:hover {
+                background: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="error-page">
+            <div class="error-code">404</div>
+            <div class="error-message">عذراً، الصفحة التي تبحث عنها غير موجودة</div>
+            <a href="/" class="back-home">العودة للصفحة الرئيسية</a>
+        </div>
+    </body>
+    </html>
+  `);
 });
 
 // Start server

@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/about",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/destinations",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/booking",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/news",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/contact",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/admin",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "functions": {
+    "server.js": {
+      "maxDuration": 30
+    }
+  }
+}
