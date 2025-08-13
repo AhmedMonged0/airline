@@ -41,7 +41,22 @@
       "maxDuration": 30
     }
   },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ],
   "env": {
-    "NODE_ENV": "production"
+    "NODE_ENV": "production",
+    "BUILD_TIME": "2024-01-01T00:00:00Z"
+  },
+  "github": {
+    "autoJobCancelation": false
   }
 }

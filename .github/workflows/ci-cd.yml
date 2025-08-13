@@ -100,9 +100,13 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
     
-    - name: Deploy to production
+    - name: Force Vercel Deployment
       run: |
-        echo "Deploying to production..."
-        # Add deployment commands here
-        # Example: kubectl apply -f k8s/
-        # or: docker-compose -f docker-compose.prod.yml up -d 
+        echo "Triggering Vercel deployment..."
+        # Update build timestamp to force rebuild
+        echo "BUILD_ID=$(date +%s)" > .vercel-build-id
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .vercel-build-id
+        git commit -m "Force Vercel rebuild - $(date)" || exit 0
+        git push 

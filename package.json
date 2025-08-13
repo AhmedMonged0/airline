@@ -1,6 +1,6 @@
 {
   "name": "airline-website",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Modern airline company website with booking system",
   "main": "server.js",
   "engines": {
@@ -9,10 +9,10 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "build": "echo \"No build step required\"",
-    "vercel-build": "echo \"Build completed\""
+    "build": "echo \"Build started at $(date)\" && echo \"Build completed\"",
+    "vercel-build": "echo \"Vercel build started at $(date)\" && echo \"Build completed\"",
+    "deploy": "node deploy.js"
   },
-
   "keywords": [
     "airline",
     "booking",
