@@ -3,7 +3,9 @@ const path = require('path');
 require('dotenv').config();
 
 // Create database file path
-const dbPath = path.join(__dirname, '../../database.sqlite');
+const dbPath = process.env.NODE_ENV === 'production' 
+  ? '/tmp/database.sqlite' 
+  : path.join(__dirname, '../../database.sqlite');
 
 // Create database connection
 const db = new sqlite3.Database(dbPath, (err) => {

@@ -2,47 +2,46 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
+      "src": "api/index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/server.js"
+      "src": "/css/(.*)",
+      "dest": "/public/css/$1"
     },
     {
-      "src": "/about",
-      "dest": "/server.js"
+      "src": "/js/(.*)",
+      "dest": "/public/js/$1"
     },
     {
-      "src": "/destinations",
-      "dest": "/server.js"
+      "src": "/images/(.*)",
+      "dest": "/public/images/$1"
     },
     {
-      "src": "/booking",
-      "dest": "/server.js"
+      "src": "/videos/(.*)",
+      "dest": "/public/videos/$1"
     },
     {
-      "src": "/news",
-      "dest": "/server.js"
-    },
-    {
-      "src": "/contact",
-      "dest": "/server.js"
-    },
-    {
-      "src": "/admin",
-      "dest": "/server.js"
+      "src": "/fonts/(.*)",
+      "dest": "/public/fonts/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/server.js"
+      "dest": "/api/index.js"
     }
   ],
   "functions": {
-    "server.js": {
-      "maxDuration": 10
+    "api/index.js": {
+      "maxDuration": 30
     }
+  },
+  "env": {
+    "NODE_ENV": "production"
   }
 }
